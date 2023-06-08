@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Team - Moderna Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/event.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <%- include('partials/header') -%>
+
+    <!-- End Header -->
+
+    <main id="main">
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <title>Events Ticket Card</title>
+      </head>
+
+      <body>
+        <div class="container-card"> 
+
+          <% event.forEach(list => { %>
+              <div class="item-container">
+                <div class="img-container">
+                  <img
+                    src="https://images.unsplash.com/photo-1569930784237-ea65a2f40a83?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=412&q=80"
+                    alt="Event image">
+                </div>
+    
+                <div class="body-container">
+                  <div class="overlay"></div>
+    
+                  <div class="event-info">
+                    <p class="title"><%= list.title %></p>
+                    <div class="separator"></div>
+                    <p class="info"><%= list.place %></p>
+                    <p class="price"><%= list.status %></p>
+    
+                    <div class="additional-info">
+                      <p class="info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <%= list.location %>
+                      </p>
+                      <p class="info">
+                        <i class="far fa-calendar-alt"></i>
+                        <%= list.date %>
+                      </p>
+    
+                      <p class="info description">
+                        <%= list.des %> <span>more...</span>
+                      </p>
+                    </div>
+                  </div>
+                  <button class="action"><span style="font-size: 10px;" >contact:</span> <br>  <%= list.contactNo %></button>
+                </div>
+              </div>
+             <% });   %>
+
+
+
+        </div>
+
+      </body>
+
+      </html>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <%- include('partials/footer') -%>
+
+      <!-- End Footer -->
+
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+          class="bi bi-arrow-up-short"></i></a>
+
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

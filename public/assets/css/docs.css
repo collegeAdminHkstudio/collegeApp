@@ -1,0 +1,60 @@
+body{
+    background: #dddddd;
+}
+.website-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .website-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  .website-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .website-item p {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .website-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+h1{
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+.download{
+    background: #720076;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.download:hover{
+    background: #550058;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+

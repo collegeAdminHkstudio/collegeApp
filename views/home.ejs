@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>College Web App</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+
+
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+  <!-- header -->
+  <%- include('partials/header') -%>
+
+    <!-- ======= Hero Section ======= -->
+    <main id="main">
+
+
+      <section id="hero" class="d-flex justify-cntent-center align-items-center">
+        <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="carousel-container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Multi tech college</span></h2>
+              <p class="animate__animated animate__fadeInUp">here you can see the details of the college staffs, college
+                year docs, college events, canteen details, maps</p>
+              <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="carousel-container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Multi tech college</span></h2>
+              <p class="animate__animated animate__fadeInUp">here you can see the details of the college staffs, college
+                year docs, college events, canteen details, maps</p>
+              <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="carousel-container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Multi tech college</span></h2>
+              <p class="animate__animated animate__fadeInUp">here you can see the details of the college staffs, college
+                year docs, college events, canteen details, maps</p>
+              <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+            </div>
+          </div>
+
+          <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+          </a>
+
+          <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+          </a>
+
+        </div>
+      </section>
+
+<hr>
+      <h1 style="color: white; text-align: center; background: rgb(219, 36, 255); border-radius: 12px; margin: 15px; ">
+        Pictures</h1>
+      <br>
+      <div class="image-grid">
+        <% locpicture.forEach(list => { %>
+          <%  if(list.pass === "picture"){   %>
+          <div class="img">
+            <div class="card">
+              <div class="imgBx">
+                <img alt="images" src=<%=list.link%> >
+              </div>
+              <div class="details">
+                <h2><%=list.title%><br><span><%=list.description%></span></h2>
+              </div>
+            </div>
+          </div>
+          <%   }    %>
+          <% });   %>
+
+      </div>
+
+<hr>
+
+      <!-- location picture -->
+
+      <div class="body-2" style="padding-top: 20px;">
+        <h1 style="color: white; text-align: center; background: rgb(255, 23, 170); border-radius: 12px; margin: 15px;">
+          Location Picture</h1>
+  
+          <div class="card-container">
+
+            <% locpicture.forEach(list => { %>
+              <%  if(list.pass === "picture1"){   %>
+            <div class="cardpic">
+              <img  alt="Image 1" class="card-image" src=<%=list.link%> >
+              <div class="card-overlay">
+                <h3 class="card-title"><%=list.title%></h3>
+                <p class="card-description"><%=list.description%></p>
+              </div>
+            </div>
+            <%   }    %>
+            <% });   %>
+          </div>
+  
+  </div>
+
+
+      <!-- end location picture -->
+
+
+
+
+
+
+<!-- friends forever -->
+      <div class="bodyt">
+        <div class="container2">
+          <h1
+            style="color: white; text-align: center; background: rgb(255, 23, 170); border-radius: 12px; margin: 15px;">
+            Friends Forever</h1>
+          <br>
+
+          <input type="radio" name="dot" id="one">
+          <input type="radio" name="dot" id="two">
+          <div class="main-card">
+            <div class="cards">
+              <div class="card">
+                <div class="content">
+                  <div class="img">
+                    <img
+                      src="assets/img/friends forever/jayachandran.jpg"
+                      alt="">
+                  </div>
+                  <div class="details">
+                    <div class="name">Jayachandran</div>
+                    <div class="job">frontend</div>
+                  </div>
+                  <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="img">
+                    <img
+                      src="assets/img/friends forever/harinath.jpg"
+                      alt="">
+                  </div>
+                  <div class="details">
+                    <div class="name">V.Harinath</div>
+                    <div class="job">fullstack developer</div>
+                  </div>
+                  <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="img">
+                    <img
+                      src="assets/img/friends forever/aravind.png"
+                      alt="">
+                  </div>
+                  <div class="details">
+                    <div class="name">Aravind</div>
+                    <div class="job">Web design</div>
+                  </div>
+                  <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="card">
+                <div class="content">
+                  <div class="img">
+                    <img
+                      src="assets/img/friends forever/Joshuae.jpg"
+                      alt="">
+                  </div>
+                  <div class="details">
+                    <div class="name">Joshuae Nikkil</div>
+                    <div class="job">C++,c Programmer</div>
+                  </div>
+                  <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="img">
+                    <img
+                      src="assets/img/friends forever/leojerry.png"
+                      alt="">
+                  </div>
+                  <div class="details">
+                    <div class="name">Leo jerry</div>
+                    <div class="job">UI Designer,programmer</div>
+                  </div>
+                  <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <div class="img">
+                    <img
+                      src="assets/img/friends forever/hemanth.jpg"
+                      alt="">
+                  </div>
+                  <div class="details">
+                    <div class="name">Hemanth</div>
+                    <div class="job">anonymous</div>
+                  </div>
+                  <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <label for="one" class=" active one"></label>
+            <label for="two" class="two"></label>
+          </div>
+        </div>
+      </div>
+
+<!-- end friends forever -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <!-- End Hero -->
+
+
+    <!-- End #main -->
+
+    <!-- footer -->
+    <%- include('partials/footer') -%>
+
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+          class="bi bi-arrow-up-short"></i></a>
+
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+      <!-- Template Main JS File -->
+
+      <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
