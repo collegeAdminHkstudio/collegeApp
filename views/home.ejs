@@ -93,6 +93,27 @@
         </div>
       </section>
 
+      <div class="containerbox">
+        <h1 style="color: white; text-align: center; background: rgb(255, 23, 170); border-radius: 12px; margin: 15px;">Gallery Library</h1>
+    
+    
+        <div class="image-container">
+          <% locpicture.forEach(list => { %>
+            <%  if(list.pass === "picture1"){   %>
+            <div class="image">
+              <img src=<%=list.link%> alt="" srcset="">
+            </div>
+            <%   }    %>
+            <% });   %>
+        </div>
+    
+    
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="/lion.jpg" alt="" srcset="">
+        </div>
+    </div>
+
 <hr>
       <h1 style="color: white; text-align: center; background: rgb(219, 36, 255); border-radius: 12px; margin: 15px; ">
         Pictures</h1>
@@ -334,6 +355,19 @@
       <!-- Template Main JS File -->
 
       <script src="assets/js/main.js"></script>
+      <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+    image.onclick = () =>{
+        document.querySelector('.popup-image').style.display = 'block';
+        document.querySelector('.popup-image img').src = image.getAttribute('src');
+    }
+});
+
+document.querySelector('.popup-image span').onclick = () =>{
+    document.querySelector('.popup-image').style.display = 'none';
+
+}
+      </script>
 
 
 </body>
