@@ -14,6 +14,8 @@
   <link href="assets/img/logo.png" rel="icon">
 
   <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src="https://kit.fontawesome.com/b1df24ba15.js" crossorigin="anonymous"></script>
+
 
   <!-- Google Fonts -->
   <link
@@ -51,6 +53,7 @@
 
           <div class="grid-item">
             <div class="card2">
+
               <div class="img-avatar">
                 <i class=" icon fa fa-bus fa-5x"></i>
               </div>
@@ -69,6 +72,7 @@
                   <div class="desc">
                     <%=list.location%>
                   </div>
+                    <a href="#" class="image-link" data-image-url=<%=list.image%> ><i class="fa-solid fa-location-dot"></i> Navigation Route</a>
                   <div class="actions">
                     <button><small style="font-size: 15px;">contact us:</small>
                       <h6>
@@ -84,9 +88,41 @@
           
           <% }); %>
             <br>
-
             <!-- card1 -->
       </div>
+
+
+    
+      <div class="image-popup" id="image-popup">
+        <div class="image-container">
+          <span id="close-btn">&times;</span>
+          <img src="" alt="Pop-up Image">
+        </div>
+      </div>
+
+      <script>
+        // JavaScript code goes here
+        document.addEventListener('DOMContentLoaded', function() {
+          const imageLinks = document.querySelectorAll('.image-link');
+          const imagePopup = document.getElementById('image-popup');
+          const imageContainer = document.querySelector('.image-container');
+          const image = imageContainer.querySelector('img');
+          const closeBtn = document.getElementById('close-btn');
+    
+          imageLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const imageUrl = this.getAttribute('data-image-url');
+              image.src = imageUrl;
+              imagePopup.style.display = 'flex';
+            });
+          });
+    
+          closeBtn.addEventListener('click', function() {
+            imagePopup.style.display = 'none';
+          });
+        });
+      </script>
 
 
 
