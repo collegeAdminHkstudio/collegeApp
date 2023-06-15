@@ -498,6 +498,7 @@ const busSchema = {
   title: String,
   location:String,
   contactNo:String,
+  image:String
 
 };
 
